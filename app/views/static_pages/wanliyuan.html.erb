@@ -1,0 +1,121 @@
+
+<body>
+<div id="wrap">
+  <div class="header1">
+    <div class="logo">
+      <%= link_to(image_tag(''),  home_index_path) %>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><%= link_to '首页', home_index_path, :target=>'_blank' %></li>
+        <li><%= link_to '草莓时光', static_pages_about_path %></li>
+        <li><%= link_to '草莓商城',  store_index_url %></li>
+        <li><%= link_to '莓味佳肴',  recipe_blog_index_url %></li>
+        <li class="selected"><%= link_to '特品草莓园',  static_pages_agencygarden_path %></li>
+        <li><%= link_to '草莓故事',  static_pages_story_path %></li>
+        <li><%= link_to '最新资讯',  static_pages_newslist_path %></li>
+        <li><%= link_to '莓园联盟',  static_pages_alliance_garden_path %></li>
+        <li><%= link_to '联系我们', static_pages_contact_path %></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="center_content">
+    <div class="left_content">
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet1.gif') %></span>顶尖莓园推荐</div>
+
+
+      <div class="feat_prod_box">
+
+        <div class="prod_det_box1">
+          <div class="box_top1"></div>
+          <div class="box_center1">
+            <div class="prod_title">万里草莓园</div>
+            <div><%= image_tag('agency/tianrun_sdh_01.jpg', :alt=>'MUZT团队的草莓时光', :title=>'', :class=>'right',:width => '150') %></div>
+            <div>
+            <p>万里草莓园……。。</p>
+            </div>
+
+            <div class="clear"></div>
+          </div>
+          <p></p>
+          <p>国内独一无二的新品种 — 圣诞红</p>
+          <div><%= image_tag('agency/tianrun_sdh_02.jpg', :alt=>'草莓时光天润园', width: 400 ) %></div>
+
+          <p>北京首届农业嘉年华精品草莓擂台赛获奖现场</p>
+          <div><%= image_tag('agency/tianrun_01.jpg', :alt=>'草莓时光天润园', width: 400 ) %></div>
+          <p>北京市著名商标— 天润园</p>
+          <div><%= image_tag('agency/tianrun_02.jpg', :alt=>'草莓时光天润园', width: 400 ) %></div>
+          <p>草莓大会推荐采摘园</p>
+          <div><%= image_tag('agency/tianrun_03.jpg', :alt=>'草莓时光天润园', width: 400 ) %></div>
+          <p>第五届中国草莓文化节中荣获银奖</p>
+          <div><%= image_tag('agency/tianrun_04.jpg', :alt=>'草莓时光天润园', width: 400 ) %></div>
+          <p>首届北京农业嘉年华精品草莓擂台赛上获得最受消费者喜爱的草莓奖</p>
+          <div><%= image_tag('agency/tianrun_05.jpg', :alt=>'草莓时光天润园', width: 400 ) %></div>
+          <p>全国草莓大会金奖</p>
+          <div><%= image_tag('agency/tianrun_06.jpg', :alt=>'草莓时光天润园', width: 400 ) %></div>
+
+          <div class="box_bottom1"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet2.gif', :alt=>'', :title=>'') %></span>最新特供精品</div>
+
+    </div><!--end of left content-->
+
+
+
+    <div class="right_content">
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet3.gif', :alt=>'', :title=>'') %></span>草莓时光 — 万德庄园</div>
+      <div class="about">
+        <p>
+          <%= image_tag('agency/tianrun_02.jpg', :alt=>'MUZT团队的草莓时光', :title=>'', :class=>'right', width: 150 ) %>
+        <p>万德庄园。……</p>
+        <p>在生产过程中，天润园建成了农田废弃物处理循环利用站，将植物残体、田间杂物经废弃物处理站处理后加工成有机肥还田，实现资源的循环利用，节能环保，更主要的是从源头防治病虫害的次生；在园区内养殖蚯蚓，利用蚯蚓粪作为基肥改良土壤；使用黄板、辣根素、依天得等物理生物方法防治病虫害，令有害生物保持在较低水平，对生产不造成威胁。</p>
+      </div>
+
+      <div class="about">
+
+        <div class="title"><span class="title_icon"><%= image_tag('bullet4.gif', :alt=>'草莓时光 — 天润园', :title=>'') %></span>韩国代表团观光考察</div>
+        <div class="new_prod_box">
+          <div>
+            <%= image_tag('agency/tianrun_kereavisit.jpg', :alt=>'草莓时光 — 天润园', :title=>'', :class=>'right', width: 200 ) %>
+          </div>
+          <p>2014年10月15日，韩国代表团到天润园草莓基地观光考察，在天润园公司夏主任的带领下，讲解了立体栽培、槽式基质栽培、常规栽培模式及土壤消毒与病虫害综合防治技术、挤塑板保温墙体技术、节水灌溉技术、集雨工程技术、植物残体处理技术、太阳风加温及物联网智能管理技术等10个项目，得到了韩国代表团的一致认可和赞许。</p>
+          <p>天润园是以农业生产为主，以发展有机生态农业为理念，以示范应用推广农业高新技术为特色，集农产品生产与销售、观光采摘、特色餐饮于一体的农业园区。</p>
+        </div>
+          <div class="title"><span class="title_icon"><%= image_tag('bullet4.gif', :alt=>'草莓时光 — 天润园', :title=>'') %></span>埃塞俄比亚妇女代表团观光考察</div>
+        <div class="new_prod_box">
+          <%= image_tag('agency/tianrun_eseby.jpg', :alt=>'草莓时光 — 天润园', :title=>'', :class=>'right', width: 200 ) %>
+          <p>2012年和2013年万众瞩目的第七届世界草莓大会、首届北京农业嘉年华的成功召开，带动了一批草莓产业的发展。大会期间天润园作为农民代表向与会者展示了中国特有的日光温室草莓产业，展示规模为74栋标准日光温室，展示的项目有立体栽培、槽式基质栽培、常规栽培模式及土壤消毒与病虫害综合防治技术、挤塑板保温墙体技术、节水灌溉技术、集雨工程技术、植物残体处理技术、太阳风加温及物联网智能管理技术等10个项目。</p>
+          <p>大会期间我们成功的接待了出席开幕式的各国使节和有好城市代表及出席大会的专家、学者近2000人的参观、交流、学习。世界草莓大会和农业嘉年华的成功举办不仅提高了企业的知名度和影响力，尤其加大了对“天润园”品牌的宣传力度。“天润园”草莓可谓家喻户晓，到昌平摘草莓必到“天润园”，是广大游客的共识。</p>
+        </div>
+      </div>
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet4.gif', :alt=>'草莓时光 — 天润园', :title=>'') %></span>踏雪寻莓 — 圣诞红</div>
+      <div class="new_prod_box">
+        <div><%= image_tag('agency/tianrun_sdh_01.jpg', :alt=>'草莓时光 — 天润园', :title=>'', :class=>'right', width: 200 ) %></div>
+        <div><%= image_tag('agency/tianrun_sdh_02.jpg', :alt=>'草莓时光 — 天润园', :title=>'', :class=>'right', width: 200 ) %></div>
+          <div><%= image_tag('agency/tianrun_sdh_05.jpg', :alt=>'草莓时光 — 天润园', :title=>'', :class=>'right', width: 200 ) %></div>
+        <p>圣诞红草莓是草莓新贵，外观呈心形，鲜美红嫩，果肉多汁，酸甜可口，且有特殊的浓郁水果芳香。</p>
+        <p>由于圣诞红草莓色、香、味俱佳，而且营养价值高，含丰富维生素C，有帮助消化的功效，所以草莓家族中的“宠儿”。圣诞红草莓是纯有机草莓，含有较多铁质、镁质、钙质等微量元素及维生素C。有机农业提倡保持产品的天然成份，因此可保持食物的原来味道。口感更好，品质更加健康。</p>
+      </div>
+
+
+    </div><!--end of right content-->
+
+
+    <div class="clear"></div>
+  </div><!--end of center content-->
+
+
+
+</div>
+
+</body>

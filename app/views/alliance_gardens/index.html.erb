@@ -1,0 +1,39 @@
+注：此页面为后面管理才看，前端顾客看静态的页面。
+
+<h1>Listing alliance_gardens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Manager</th>
+      <th>Mobile</th>
+      <th>Phone</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alliance_gardens.each do |alliance_garden| %>
+      <tr>
+        <td><%= alliance_garden.title %></td>
+        <td><%= alliance_garden.content %></td>
+        <td><%= alliance_garden.manager %></td>
+        <td><%= alliance_garden.mobile %></td>
+        <td><%= alliance_garden.phone %></td>
+        <td><%= alliance_garden.address %></td>
+        <td><%= link_to 'Show', alliance_garden %></td>
+        <td><%= link_to 'Edit', edit_alliance_garden_path(alliance_garden) %></td>
+        <td><%= link_to 'Destroy', alliance_garden, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= paginate @alliance_gardens, :left => 2, :right => 3 %>
+
+<br>
+
+<%= link_to '新增联盟商家', new_alliance_garden_path %>

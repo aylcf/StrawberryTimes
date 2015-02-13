@@ -1,0 +1,30 @@
+<div id="product_list">
+<h1>商品信息列表</h1>
+
+  <table>
+    <% @products.each do |product| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td><%= image_tag(product.image_url, :class => 'list_image', width: 200) %></td>
+
+        <td class="list_description">
+          <dl>
+            <dt><%= product.title %></dt>
+            <dd><%= truncate(strip_tags(product.description), :length => 80) %></dd>
+          </dl>
+        </td>
+
+        <td class="list_actions">
+          <%= link_to '查看商品', product %><br/>
+          <%= link_to '编辑商品', edit_product_path(product) %><br/>
+          <%= link_to '删除商品', product, method: :delete, data: { confirm: '确定删除此商品吗？' } %>
+        </td>
+      </tr>
+
+    <% end %>
+  </table>
+
+<br/>
+<%= paginate @products, :left => 2, :right => 3 %>
+</div>
+<br>
+<%= link_to '新建商品', new_product_path %>

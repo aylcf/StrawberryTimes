@@ -1,0 +1,149 @@
+<%= form_for(@recipe) do |f| %>
+  <% if @recipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+      <ul>
+      <% @recipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :草莓西点 %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :菜品描述 %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :主图URL目录 %><br>
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述1 %><br>
+    <%= f.text_area :detail_text_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片1 %><br>
+    <%= f.text_field :detail_image_url_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述2 %><br>
+    <%= f.text_area :detail_text_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片2 %><br>
+    <%= f.text_field :detail_image_url_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述3 %><br>
+    <%= f.text_area :detail_text_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片3 %><br>
+    <%= f.text_field :detail_image_url_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述4 %><br>
+    <%= f.text_area :detail_text_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片4 %><br>
+    <%= f.text_field :detail_image_url_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述5 %><br>
+    <%= f.text_area :detail_text_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片5 %><br>
+    <%= f.text_field :detail_image_url_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述6 %><br>
+    <%= f.text_area :detail_text_6 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片6 %><br>
+    <%= f.text_field :detail_image_url_6 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述7 %><br>
+    <%= f.text_area :detail_text_7 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片7 %><br>
+    <%= f.text_field :detail_image_url_7 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述8 %><br>
+    <%= f.text_area :detail_text_8 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片8 %><br>
+    <%= f.text_field :detail_image_url_8 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述9 %><br>
+    <%= f.text_area :detail_text_9 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片9 %><br>
+    <%= f.text_field :detail_image_url_9 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述10 %><br>
+    <%= f.text_area :detail_text_10 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片10 %><br>
+    <%= f.text_field :detail_image_url_10 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述11 %><br>
+    <%= f.text_area :detail_text_11 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片11 %><br>
+    <%= f.text_field :detail_image_url_11 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述12 %><br>
+    <%= f.text_area :detail_text_12 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片12 %><br>
+    <%= f.text_field :detail_image_url_12 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述13 %><br>
+    <%= f.text_area :detail_text_13 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片13 %><br>
+    <%= f.text_field :detail_image_url_13 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述14 %><br>
+    <%= f.text_area :detail_text_14 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片14 %><br>
+    <%= f.text_field :detail_image_url_14 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤描述15 %><br>
+    <%= f.text_area :detail_text_15 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细步骤图片15 %><br>
+    <%= f.text_field :detail_image_url_15 %>
+  </div>
+  <div class="actions">
+    <%= f.submit '确 定' %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module RecipeBlogHelper
+end

@@ -1,0 +1,2 @@
+module NewslistsHelper
+end

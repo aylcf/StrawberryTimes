@@ -1,0 +1,7 @@
+<p>您好！ <%= @resource.email %>!</p>
+
+<p>由于多次不成功的登录尝试，您的帐户已经被保护性锁定。</p>
+
+<p>请点击下面的链接来解除对您帐户的锁定。</p>
+
+<p><%= link_to '解锁我的帐户', unlock_url(@resource, unlock_token: @token) %></p>

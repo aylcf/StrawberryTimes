@@ -1,0 +1,39 @@
+<body>
+<div id="wrap">
+  <div class="header1">
+    <div class="logo">
+      <%= link_to(image_tag(''),  home_index_path) %>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><%= link_to '首页', home_index_path %></li>
+        <li><%= link_to '草莓时光', static_pages_about_path %></li>
+        <li class="selected"><%= link_to '草莓商城',  store_index_url %></li>
+        <li><%= link_to '莓味佳肴',  recipe_blog_index_url %></li>
+        <li><%= link_to '特品草莓园',  static_pages_agencygarden_path %></li>
+        <li><%= link_to '草莓故事',  static_pages_story_path %></li>
+        <li><%= link_to '最新资讯',  static_pages_newslist_path %></li>
+        <li><%= link_to '莓园联盟',  static_pages_alliance_garden_path %></li>
+        <li><%= link_to '联系我们', static_pages_contact_path %></li>
+      </ul>
+    </div>
+  </div>
+
+  <%= render 'carts/cart_show_form' %>
+  <table>
+  <tr>
+    <td>
+      <%= button_to '生成订单', new_order_path, :method=>:get %>
+    </td>
+    <td>
+      <%= button_to '清空购物车', @cart, :id => 'button_clean', method: :delete, data: { confirm: '亲，您确定要清空购物车中的商品吗？'} %>
+    </td>
+    <td>
+      <%= link_to '继续购物', store_index_url, :id => 'button_clean' %>
+    </td>
+  </tr>
+  </table>
+
+</div>
+
+</body>

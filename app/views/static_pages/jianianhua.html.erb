@@ -1,0 +1,87 @@
+
+<body>
+<div id="wrap">
+  <div class="header1">
+    <div class="logo">
+      <%= link_to(image_tag(''),  home_index_path) %>
+    </div>
+    <div id="menu">
+      <ul>
+        <li class="selected"><%= link_to '首页', home_index_path, :target=>'_blank' %></li>
+        <li><%= link_to '草莓时光', static_pages_about_path %></li>
+        <li><%= link_to '草莓商城',  store_index_url %></li>
+        <li><%= link_to '莓味佳肴',  recipe_blog_index_url %></li>
+        <li><%= link_to '特品草莓园',  static_pages_agencygarden_path %></li>
+        <li><%= link_to '草莓故事',  static_pages_story_path %></li>
+        <li><%= link_to '最新资讯',  static_pages_newslist_path %></li>
+        <li><%= link_to '莓园联盟',  static_pages_alliance_garden_path %></li>
+        <li><%= link_to '联系我们', static_pages_contact_path %></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="center_content">
+    <div class="left_content">
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet1.gif') %></span>北京农业嘉年华</div>
+
+
+      <div class="feat_prod_box">
+
+        <div class="prod_det_box1">
+          <div class="box_top1"></div>
+          <div class="box_center1">
+            <div class="prod_title">北京农业嘉年华－北京昌平</div>
+            <div><%= image_tag('jianianhua.jpg', :alt=>'MUZT团队的草莓时光', :title=>'', :class=>'right', :width => '150') %></div>
+            <div>
+            <p>昌平区在成功举办了第七届世界草莓大会的基础上，利用大会现有场馆又成功举办两届北京农业嘉年华。北京农业嘉年华受到了广大首都市民的高度评价，已经成为北京都市农业的一张绚丽“名片”，引起了国内外的广泛关注和效仿，对推动我国都市农业的创新发展，丰富城乡居民的休闲文化生活，促进农业科技进步，打造美丽中国起到了很好的示范和带动作用。</p>
+              <p>北京农业嘉年华活动在不断探索和拓展都市型现代农业的实现形式、发展方式、运行模式上做了大量卓有成效的探索和创新，办出了代表首都形象的特色农业会展品牌。</p>
+              <p>昌平区政府坚持群众路线，坚持节俭办会，坚持科学运作，以强烈的社会责任感和服务市民的信念，为都市居民奉献“一年又一年”的农业炫彩风景，为昌平区农业主导产业-草莓产业的发展不断注入活力，显著提升了北京及昌平区的知名度与影响力，即将开展的第三届北京农业嘉年华，又将捧献出一道都市农业盛宴。</p>
+            </div>
+
+            <div class="clear"></div>
+          </div>
+          <p></p>
+          <div><%= image_tag('jianianhua/jnh1.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh2.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh3.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh4.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh5.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh6.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh7.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh8.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh9.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh10.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh11.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh12.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh13.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh14.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('jianianhua/jnh15.jpg', :width => 400, :alt=>'MUZT团队的草莓时光') %></div>
+
+
+          <div class="box_bottom1"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+
+    </div><!--end of left content-->
+
+
+
+    <div class="right_content">
+
+      <%= render 'layouts/right_down_form' %>
+
+    </div><!--end of right content-->
+
+
+    <div class="clear"></div>
+  </div><!--end of center content-->
+
+
+
+</div>
+
+</body>

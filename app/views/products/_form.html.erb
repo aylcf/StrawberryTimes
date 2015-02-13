@@ -1,0 +1,154 @@
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :商品名称 %><br>
+    <%= f.text_field :title, :size=>30 %>
+  </div>
+  <div class="field">
+    <%= f.label :商品主要描述 %><br>
+    <%= f.text_area :description, :size=>100 %>
+  </div>
+  <div class="field">
+    <%= f.label :商品图片URL目录 %><br>
+    <%= f.text_field :image_url, :size=>50 %>
+  </div>
+  <div class="field">
+    <%= f.label :商品价格 %><br>
+    <%= f.text_field :price, :size=>10 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细介绍1 %><br>
+    <%= f.text_area :detail_text_1, :size=>100 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细介绍图片1 %><br>
+    <%= f.text_field :detail_image_url_1, :size=>50 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细介绍2 %><br>
+    <%= f.text_area :detail_text_2, :size=>100 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细介绍图片2 %><br>
+    <%= f.text_field :detail_image_url_2, :size=>50 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细介绍3 %><br>
+    <%= f.text_area :detail_text_3, :size=>100 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细介绍图片3 %><br>
+    <%= f.text_field :detail_image_url_3, :size=>50 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细介绍4 %><br>
+    <%= f.text_area :detail_text_4, :size=>100 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细介绍图片4 %><br>
+    <%= f.text_field :detail_image_url_4, :size=>50 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细介绍5 %><br>
+    <%= f.text_area :detail_text_5, :size=>100 %>
+  </div>
+  <div class="field">
+    <%= f.label :详细介绍图片5 %><br>
+    <%= f.text_field :detail_image_url_5, :size=>50 %>
+  </div>
+    <div class="field">
+      <%= f.label :详细介绍6 %><br>
+      <%= f.text_area :detail_text_6, :size=>100 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍图片6 %><br>
+      <%= f.text_field :detail_image_url_6, :size=>50 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍7 %><br>
+      <%= f.text_area :detail_text_7, :size=>100 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍图片7 %><br>
+      <%= f.text_field :detail_image_url_7, :size=>50 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍8 %><br>
+      <%= f.text_area :detail_text_8, :size=>100 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍图片8 %><br>
+      <%= f.text_field :detail_image_url_8, :size=>50 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍9 %><br>
+      <%= f.text_area :detail_text_9, :size=>100 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍图片9 %><br>
+      <%= f.text_field :detail_image_url_9, :size=>50 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍10 %><br>
+      <%= f.text_area :detail_text_10, :size=>100 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍图片10 %><br>
+      <%= f.text_field :detail_image_url_10, :size=>50 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍11 %><br>
+      <%= f.text_area :detail_text_11, :size=>100 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍图片11 %><br>
+      <%= f.text_field :detail_image_url_11, :size=>50 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍12 %><br>
+      <%= f.text_area :detail_text_12, :size=>100 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍图片12 %><br>
+      <%= f.text_field :detail_image_url_12, :size=>50 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍13 %><br>
+      <%= f.text_area :detail_text_13, :size=>100 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍图片13 %><br>
+      <%= f.text_field :detail_image_url_13, :size=>50 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍14 %><br>
+      <%= f.text_area :detail_text_14, :size=>100 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍图片14 %><br>
+      <%= f.text_field :detail_image_url_14, :size=>50 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍15 %><br>
+      <%= f.text_area :detail_text_15, :size=>100 %>
+    </div>
+    <div class="field">
+      <%= f.label :详细介绍图片15 %><br>
+      <%= f.text_field :detail_image_url_15, :size=>50 %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit '确 定 ' %>
+  </div>
+<% end %>

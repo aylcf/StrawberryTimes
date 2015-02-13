@@ -1,0 +1,35 @@
+// Place all the styles related to the store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Import Bootstrap and Customize it here.
+@import "bootstrap";
+
+.prod_det_box2{
+  width:700px;
+  float:left;
+  padding:0 0 0 15px;
+  position:relative;
+}
+.box_top2{
+  width:700px;
+  height:9px;
+  background:url(box_top.gif) no-repeat center bottom;
+}
+.box_center2{
+  width:700px;
+  height:auto;
+  background:url(box_center.gif) repeat-y center;
+}
+.box_bottom2{
+  width:700px;
+  height:9px;
+  background:url(box_bottom.gif) no-repeat center top;
+}
+
+.right_content2{
+  width:200px;
+  float:left;
+  padding:20px 0 20px 20px;
+}
+

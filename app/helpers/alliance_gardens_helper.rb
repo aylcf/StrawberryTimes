@@ -1,0 +1,2 @@
+module AllianceGardensHelper
+end

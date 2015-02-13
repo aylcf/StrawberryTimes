@@ -1,0 +1,41 @@
+<%= form_for(@alliance_garden) do |f| %>
+  <% if @alliance_garden.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@alliance_garden.errors.count, "error") %> prohibited this alliance_garden from being saved:</h2>
+
+      <ul>
+      <% @alliance_garden.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :公司名称 %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :公司简介 %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :联系人 %><br>
+    <%= f.text_field :manager %>
+  </div>
+  <div class="field">
+    <%= f.label :联系手机 %><br>
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="field">
+    <%= f.label :联系座机 %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :公司地址 %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="actions">
+    <%= f.submit '确 定' %>
+  </div>
+<% end %>

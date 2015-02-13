@@ -1,0 +1,83 @@
+
+<body>
+<div id="wrap">
+  <div class="header1">
+    <div class="logo">
+      <%= link_to(image_tag(''),  home_index_path) %>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><%= link_to '首页', home_index_path %></li>
+        <li><%= link_to '草莓时光', static_pages_about_path %></li>
+        <li><%= link_to '草莓商城',  store_index_url %></li>
+        <li><%= link_to '莓味佳肴',  recipe_blog_index_url %></li>
+        <li><%= link_to '特品草莓园',  static_pages_agencygarden_path %></li>
+        <li><%= link_to '草莓故事',  static_pages_story_path %></li>
+        <li><%= link_to '最新资讯',  static_pages_newslist_path %></li>
+        <li><%= link_to '莓园联盟',  static_pages_alliance_garden_path %></li>
+        <li class="selected"><%= link_to '联系我们', static_pages_contact_path %></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="center_content">
+    <div class="left_content">
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet1.gif') %></span>联系我们</div>
+
+      <div class="feat_prod_box_details">
+        <p class="details">
+          请输入您的姓名或昵称，以及您的email。有任何好事，我们都将第一时间通知您。
+        </p>
+
+          <div class="contact_form1">
+            <div class="form_subtitle">请留下您的联系方式</div>
+            <span class="required_notification">* 表示必填项</span>
+
+            <%= form_for @member, :url => {:controller => 'members', :action => 'create_contact'} do |f| %>
+              <form name="register">
+                <div class="form_row">
+                  <label class="contact">
+                    <strong>姓名昵称:</strong>
+                  </label>
+                  <%= f.text_field :name, :type=>'text', :placeholder=>'Chinaz', :required=>'true' %>
+                  <span>*</span>
+                </div>
+                <div class="form_row">
+                    <label class="contact">
+                      <strong>电子邮件:</strong>
+                    </label>
+                    <%= f.text_field :email, :type=>'email', :placeholder=>'123456@qq.com', :required=>'ture', :pattern=>'/\w@\w*\.\w/' %>
+                  <span>*</span>
+                </div>
+                <div class="form_row">
+                  <%= f.submit '提交', :class=>'register' %>
+                </div>
+              </form>
+            <% end %>
+          </div>
+
+      </div>
+
+        <div class="clear"></div>
+
+
+    </div><!--end of left content-->
+
+    <div class="right_content">
+
+      <%= render 'layouts/right_down_form' %>
+
+
+    </div><!--end of right content-->
+
+
+    <div class="clear"></div>
+  </div><!--end of center content-->
+
+
+
+</div>
+
+</body>

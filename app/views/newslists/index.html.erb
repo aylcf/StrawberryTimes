@@ -1,0 +1,38 @@
+注：此页面为后面管理才看，前端顾客看静态的页面。
+
+<div>
+  <h1>Listing newslists</h1>
+
+  ------------------
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Posttime</th>
+      <th>Content</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @newslists.each do |newslist| %>
+      <tr>
+        <td><%= newslist.title %></td>
+        <td><%= newslist.posttime %></td>
+        <td><%= truncate(newslist.content, :length => 300) %></td>
+        <td><%= newslist.image %></td>
+        <td><%= link_to 'Show', newslist %></td>
+        <td><%= link_to 'Edit', edit_newslist_path(newslist) %></td>
+        <td><%= link_to 'Destroy', newslist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+  <%= paginate @newslists, :left => 2, :right => 3 %>
+</div>
+<br>
+
+<%= link_to 'New Newslist', new_newslist_path %>

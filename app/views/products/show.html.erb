@@ -1,0 +1,117 @@
+<body>
+<div id="wrap">
+  <div class="header1">
+    <div class="logo">
+      <%= link_to(image_tag(''),  home_index_path) %>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><%= link_to '首页', home_index_path %></li>
+        <li><%= link_to '草莓时光', static_pages_about_path %></li>
+        <li class="selected"><%= link_to '草莓商城',  store_index_url %></li>
+        <li><%= link_to '莓味佳肴',  recipe_blog_index_url %></li>
+        <li><%= link_to '特品草莓园',  static_pages_agencygarden_path %></li>
+        <li><%= link_to '草莓故事',  static_pages_story_path %></li>
+        <li><%= link_to '最新资讯',  static_pages_newslist_path %></li>
+        <li><%= link_to '莓园联盟',  static_pages_alliance_garden_path %></li>
+        <li><%= link_to '联系我们', static_pages_contact_path %></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="center_content">
+    <div class="left_content">
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet1.gif') %></span>莓味精品</div>
+
+
+      <div class="feat_prod_box">
+
+        <div class="prod_det_box2">
+          <div class="box_top2"></div>
+          <div class="box_center2">
+            <p class="details">
+
+
+            <div class="clear"></div>
+          </div>
+          <p></p>
+
+
+          <!--start of product show -->
+        <div>
+          <p id="notice"><%= notice %></p>
+
+          <div id="product_page">
+            <table class="product_main">
+            <tr>
+              <td>
+                <%= image_tag(@product.image_url, :class => 'product_image', width:120, hight:120) %>
+              </td>
+              <td class="list_description">
+                <dl>
+                  <dt><%= @product.title %></dt>
+                  <dd><%= @product.description %></dd>
+                </dl>
+                <dl>
+                  <%= number_to_currency(@product.price, unit: '￥') %> 元
+                </dl>
+
+                <dl>
+                  <%= form_tag :line_items %>
+                  <%= number_field_tag( :quantity, @buy_quantity[@product.id], :min=>'1' ) %>
+                  <%= hidden_field_tag(:product_id, @product.id) %>
+                  <%= button_to '放入购物车' %>
+                  <% if @buy_quantity[:is_selected] %>
+                    <span> 您已选购 <%= @buy_quantity[@product.id] %> 件此商品 </span>
+                  <% end %>
+
+                </dl>
+
+
+              </td>
+            </tr>
+            </table>
+
+            <table class="product_detail">
+
+            <tr>
+              <td class="list_detail">
+                  <% if @product.detail_text_1 %>
+                    <dl><dt><%= @product.detail_text_1 %></dt></dl>
+                  <% end %>
+                  <% if @product.detail_image_url_1 %>
+                    <dl><dd><%= image_tag(@product.detail_image_url_1, width:400, hight:400) %></dd></dl>
+                  <% end %>
+
+              </td>
+            </tr>
+            </table>
+          </div>
+        </div>
+        <!--end of product show -->
+
+
+          <div class="box_bottom2"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div><!--end of left content-->
+
+    <div class="right_content">
+
+      <%= render 'layouts/right_down_form' %>
+
+    </div><!--end of right content-->
+
+
+
+    <div class="clear"></div>
+  </div><!--end of center content-->
+
+
+</div>
+
+</body>
+

@@ -1,0 +1,42 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <br/>
+
+
+  <div class="field">
+    <%= f.label :登陆用电子邮箱 %><br>
+    <%= f.text_field :email, :size=>40 %>*
+  </div>
+
+
+  <div class="field">
+    <%= f.label :收货人姓名 %><br>
+    <%= f.text_field :name, :size=>40 %>*
+  </div>
+  <div class="field">
+    <%= f.label :联系电话 %><br>
+    <%= f.text_field :phone,:size=>20 %>*
+  </div>
+  <div class="field">
+    <%= f.label :收货地址 %><br>
+    <%= f.text_area :address, :rows=>3, :cols=>40 %>*
+  </div>
+  <div class="field">
+    <%= f.label :付款种类 %><br>
+    <%= f.select :pay_type, Order::PAYMENT_TYPES, :prompt=>'请选择付款方式' %>*
+  </div>
+  <div class="actions">
+    <%= f.submit '提交订单'%>
+  </div>
+<% end %>

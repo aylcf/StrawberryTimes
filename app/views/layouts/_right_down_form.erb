@@ -1,0 +1,89 @@
+<div class="cart">
+  <% if session[:total_price].nil? %>
+    <div class="title"><span class="title_icon"><%= image_tag('cart.gif', :alt=>'草莓购物车', :title=>'') %></span>您的购物车：还没选购哦
+    </div>
+  <% else %>
+    <div class="title"><span class="title_icon"><%= image_tag('cart.gif', :alt=>'草莓购物车', :title=>'') %></span>您的购物车：<%= number_to_currency(session[:total_price], unit: '￥') %> 元
+    </div>
+    <div class="title">
+      <%= button_to '生成订单', new_order_path, :method=>:get %>
+    </div>
+  <% end %>
+</div>
+
+
+<div class="title"><span class="title_icon"><%= image_tag('bullet3.gif', :alt=>'', :title=>'') %></span>关于草莓时光</div>
+<div class="about">
+  <p>
+  <%= image_tag('about.gif', :alt=>'MUZT团队的草莓时光', :title=>'', :class=>'right') %>
+  <p>草莓时光网来自于回归田园，享受爱情，安逸慢生活的愿景。</p>
+  <p>    MUZT团队每天都生活工作在北京昌平，路边满是生态草莓园的景象。世界草莓博览会的举办，为MUZT团队带来全世界各地热爱草莓的朋友，同时带来了风格各异的草莓情绪和文化。</p>
+  <p>草莓时光网希望将最具特色的草莓品种和草莓美食在这里出售和传播，销售的草莓产品全部都是荣获世界草莓博览会前几名的生态草莓产品。</p>
+  </p>
+</div>
+
+<div class="right_box">
+  <div class="title"><span class="title_icon"><%= image_tag('bullet4.gif', :alt=>'获奖草莓推荐', :title=>'') %></span>亲民品种草莓</div>
+  <div class="new_products">
+    <div class="new_prod_box">
+      <a>红颜</a>
+      <div class="new_prod_bg">
+        <%= link_to(image_tag('hongyan-112.jpg'), product_path('1'), :url => {:controller => 'products', :action => 'find_product', :target=>'_blank' }, :alt=>'红颜', :title=>'', :class=>'thumb', :border=>'0' ) %>
+      </div>
+    </div>
+
+    <div class="new_prod_box">
+      <a>章姬</a>
+      <div class="new_prod_bg">
+        <%= link_to(image_tag('zhangji-112.jpg'), product_path('2'), :url => {:controller => 'products', :action => 'find_product', :target=>'_blank' }, :alt=>'章姬', :title=>'', :class=>'thumb', :border=>'0' ) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="right_box">
+  <div class="title"><span class="title_icon"><%= image_tag('bullet4.gif', :alt=>'获奖草莓推荐', :title=>'') %></span>高档品种草莓</div>
+  <div class="new_products">
+
+    <div class="new_prod_box">
+      <a>皇家御用</a>
+      <div class="new_prod_bg">
+        <%= link_to(image_tag('huangjiayuyong-112.jpg'), product_path('3'), :url => {:controller => 'products', :action => 'find_product', :target=>'_blank' }, :alt=>'皇家御用', :title=>'', :class=>'thumb', :border=>'0' ) %>
+      </div>
+    </div>
+
+    <div class="new_prod_box">
+      <a>点雪</a>
+      <div class="new_prod_bg">
+        <%= link_to(image_tag('dianxue-112.jpg'), product_path('4'), :url => {:controller => 'products', :action => 'find_product', :target=>'_blank' }, :alt=>'点雪', :title=>'', :class=>'thumb', :border=>'0' ) %>
+      </div>
+    </div>
+
+    <div class="new_prod_box">
+      <a>隨珠</a>
+      <div class="new_prod_bg">
+        <%= link_to(image_tag('suizu-112.jpg'), product_path('5'), :url => {:controller => 'products', :action => 'find_product', :target=>'_blank' }, :alt=>'隨珠', :title=>'', :class=>'thumb', :border=>'0' ) %>
+      </div>
+    </div>
+
+    <div class="new_prod_box">
+      <a>甜查理</a>
+      <div class="new_prod_bg">
+        <%= link_to(image_tag('tianchali-112.jpg'), product_path('6'), :url => {:controller => 'products', :action => 'find_product', :target=>'_blank' }, :alt=>'甜查理', :title=>'', :class=>'thumb', :border=>'0' ) %>
+      </div>
+    </div>
+
+    <div class="new_prod_box">
+      <a>圣诞红</a>
+      <div class="new_prod_bg">
+        <%= link_to(image_tag('shengdanhong-112.jpg'), product_path('7'), :url => {:controller => 'products', :action => 'find_product', :target=>'_blank' }, :alt=>'圣诞红', :title=>'', :class=>'thumb', :border=>'0' ) %>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+

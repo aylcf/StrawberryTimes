@@ -1,0 +1,76 @@
+
+<body>
+<div id="wrap">
+  <div class="header1">
+    <div class="logo">
+      <%= link_to(image_tag(''),  home_index_path) %>
+    </div>
+    <div id="menu">
+      <ul>
+        <li class="selected"><%= link_to '首页', home_index_path, :target=>'_blank' %></li>
+        <li><%= link_to '草莓时光', static_pages_about_path %></li>
+        <li><%= link_to '草莓商城',  store_index_url %></li>
+        <li><%= link_to '莓味佳肴',  recipe_blog_index_url %></li>
+        <li><%= link_to '特品草莓园',  static_pages_agencygarden_path %></li>
+        <li><%= link_to '草莓故事',  static_pages_story_path %></li>
+        <li><%= link_to '最新资讯',  static_pages_newslist_path %></li>
+        <li><%= link_to '莓园联盟',  static_pages_alliance_garden_path %></li>
+        <li><%= link_to '联系我们', static_pages_contact_path %></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="center_content">
+    <div class="left_content">
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet1.gif') %></span>世界草莓博览会</div>
+
+
+      <div class="feat_prod_box">
+
+        <div class="prod_det_box1">
+          <div class="box_top1"></div>
+          <div class="box_center1">
+            <div class="prod_title">第七界世界草莓博览会－北京昌平</div>
+            <div><%= image_tag('worldcongress.jpg', :alt=>'MUZT团队的草莓时光', :title=>'', :class=>'right', :width => '150') %></div>
+            <div>
+            <p>产品全部都是荣获世界草莓博览会前几名的生态草莓产品。</p>
+            </div>
+
+            <div class="clear"></div>
+          </div>
+          <p></p>
+          <div><%= image_tag('congress/congress1.jpg', :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('congress/congress2.jpg', :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('congress/congress3.jpg', :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('congress/congress4.jpg', :alt=>'MUZT团队的草莓时光') %></div>
+          <div><%= image_tag('congress/congress5.jpg', :alt=>'MUZT团队的草莓时光') %></div>
+          <div class="box_bottom1"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet2.gif', :alt=>'', :title=>'') %></span>最新特供精品</div>
+
+    </div><!--end of left content-->
+
+
+
+    <div class="right_content">
+
+      <%= render 'layouts/right_down_form' %>
+
+    </div><!--end of right content-->
+
+
+    <div class="clear"></div>
+  </div><!--end of center content-->
+
+
+
+</div>
+
+</body>

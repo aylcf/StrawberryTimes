@@ -1,0 +1,201 @@
+<body>
+<div id="wrap">
+  <div class="header1">
+    <div class="logo">
+      <%= link_to(image_tag(''),  home_index_path) %>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><%= link_to '首页', home_index_path %></li>
+        <li><%= link_to '草莓时光', static_pages_about_path %></li>
+        <li><%= link_to '草莓商城',  store_index_url %></li>
+        <li class="selected"><%= link_to '莓味佳肴',  recipe_blog_index_url %></li>
+        <li><%= link_to '特品草莓园',  static_pages_agencygarden_path %></li>
+        <li><%= link_to '草莓故事',  static_pages_story_path %></li>
+        <li><%= link_to '最新资讯',  static_pages_newslist_path %></li>
+        <li><%= link_to '莓园联盟',  static_pages_alliance_garden_path %></li>
+        <li><%= link_to '联系我们', static_pages_contact_path %></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="center_content">
+    <div class="left_content">
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet1.gif') %></span>莓味佳肴</div>
+
+
+      <div class="feat_prod_box">
+
+        <div class="prod_det_box2">
+          <div class="box_top2"></div>
+          <div class="box_center2">
+            <p class="details">
+
+
+            <div class="clear"></div>
+          </div>
+          <p></p>
+
+          <!--start of recipe show -->
+          <div>
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <%= @recipe.title %>
+      </p>
+
+      <p>
+        <%= @recipe.description %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.image_url, width: 200) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_1 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_1, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_2 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_2, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_3 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_3, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_4 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_4, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_5 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_5, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_6 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_6, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_7 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_7, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_8 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_8, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_9 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_9, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_10 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_10, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_11 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_11, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_12 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_12, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_13 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_13, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_14 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_14, width:400, hight:400) %>
+      </p>
+
+      <p>
+        <%= @recipe.detail_text_15 %>
+      </p>
+
+      <p>
+        <%= image_tag(@recipe.detail_image_url_15, width:400, hight:400) %>
+      </p>
+
+    </div>
+          <!--start of recipe show -->
+
+
+        <div class="box_bottom2"></div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        </div><!--end of left content-->
+
+    <div class="right_content">
+
+      <%= render 'layouts/right_down_form' %>
+
+    </div><!--end of right content-->
+
+
+
+    <div class="clear"></div>
+    </div><!--end of center content-->
+
+
+  </div>
+
+</body>

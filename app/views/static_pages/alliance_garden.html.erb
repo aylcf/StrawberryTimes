@@ -1,0 +1,103 @@
+
+<body>
+<div id="wrap">
+  <div class="header1">
+    <div class="logo">
+      <%= link_to(image_tag(''),  home_index_path) %>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><%= link_to '首页', home_index_path %></li>
+        <li><%= link_to '草莓时光', static_pages_about_path %></li>
+        <li><%= link_to '草莓商城',  store_index_url %></li>
+        <li><%= link_to '莓味佳肴',  recipe_blog_index_url %></li>
+        <li><%= link_to '特品草莓园',  static_pages_agencygarden_path %></li>
+        <li><%= link_to '草莓故事',  static_pages_story_path %></li>
+        <li><%= link_to '最新资讯',  static_pages_newslist_path %></li>
+        <li class="selected"><%= link_to '莓园联盟',  static_pages_alliance_garden_path %></li>
+        <li><%= link_to '联系我们', static_pages_contact_path %></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="center_content">
+    <div class="left_content">
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet1.gif') %></span>莓园联盟</div>
+
+
+      <div class="feat_prod_box">
+
+        <div class="prod_det_box1">
+          <div class="box_top1"></div>
+          <div class="box_center1">
+            <div class="prod_title">莓园联盟</div>
+            <p class="details">
+            <p>
+              <%= image_tag('aboutST.jpg', :alt=>'MUZT团队的草莓时光', :title=>'', :class=>'right', :width => '150') %>
+            <p>    MUZT团队正在努力建设中，敬请期待。</p>
+            <p>    如果您是草莓粉，同时了解一些正品有机草莓种植园或草莓制品深加工企业信息，非常欢迎您参与贡献，为草莓粉们提供更多草莓园信息。</p>
+
+            <p>如果您是正品有机草莓种植园经营者或草莓制品深加工企业，非常欢迎您提交详细资料，让广大草莓粉能够了解到您。</p>
+            <p>请点击“提交草莓园信息”，来提交信息。</p>
+            <div><%= button_to '提交草莓园信息', static_pages_input_garden_info_url %></div>
+
+            <div class="clear"></div>
+          </div>
+
+          <div class="box_bottom1"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <p></p>
+      <div>       <!--Start of alliance_garden index list -->
+        <table>
+          <% @alliance_gardens.each do |alliance_garden| %>
+            <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+
+              <td class="list_description">
+                <dl>
+                  <dt><%= alliance_garden.title %></dt>
+                  <dd><%= truncate(strip_tags(alliance_garden.content), :length => 200) %></dd>
+                </dl>
+              </td>
+
+              <td class="list_actions">
+                <%= link_to '浏览详情', alliance_garden, :url => {:controller => 'newslists', :action => 'show', :target=>'_blank' } %><br/>
+
+              </td>
+
+            </tr>
+
+          <% end %>
+        </table>
+
+        <br/>
+        <%= paginate @alliance_gardens, :left => 2, :right => 3 %>
+      </div>       <!--End of alliance_garden index list -->
+
+    </div><!--end of left content-->
+
+
+    </div><!--end of left content-->
+
+
+
+    <div class="right_content">
+
+      <%= render 'layouts/right_down_form' %>
+
+
+    </div><!--end of right content-->
+
+
+    <div class="clear"></div>
+  </div><!--end of center content-->
+
+
+
+</div>
+
+</body>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>StrawberryTimes 控制台程序</title>
+
+</head>
+
+<body>
+<!-- Header content -->
+<header>
+
+
+  <!-- Identity details -->
+  <div class="profileHeader">
+    <h1>StrawberryTimes 控制台</h1>
+    <h3>StrawberryTimes 网站后台设置及数据库管理</h3>
+    <hr>
+    <p>系统管理人员可以登陆管理系统数据库数据，以及进行各类的统计分析和生成报表。</p>
+    <p>现在时间：<%= Time.now %></p>
+    <p>我们当前总共有 <%= @total_orders %> 个订单。</p>
+    <p>当前管理员是：<%= @current_user %></p>
+  </div>
+  <% if session[:user_id] %>
+    <%= button_to '退 出', logout_path, :method=>:delete %>
+  <% end %>
+
+  <br/>
+</header>
+<!-- content -->
+<br>
+<div class="mainContent">
+  <!-- Contact details -->
+  <section class="section1">
+    <h2 class="sectionTitle">基础数据表管理</h2>
+        <div class="socialNetworkNav">
+          <!-- Add a Anchor tag with nested img tag here -->
+          <%= link_to image_tag('sb_pin.jpg',:alt => '商品管理'), products_url, :target=>'_blank' %>
+          <p><span><%= link_to '商品库', products_url, :target=>'_blank' %></span></p>
+        </div>
+
+        <div class="socialNetworkNav">
+          <!-- Add a Anchor tag with nested img tag here -->
+          <%= link_to image_tag('sb_pin.jpg',:alt => '菜谱管理'), recipes_url, :target=>'_blank' %>
+          <p><span><%= link_to '菜谱库', recipes_url, :target=>'_blank' %></span></p>
+        </div>
+    <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here -->
+      <%= link_to image_tag('sb_pin.jpg', :alt=>'订单管理'), orders_url, :target=>'_blank' %>
+      <p><span><%= link_to '订单库', orders_url, :target=>'_blank' %></span></p>
+    </div>
+    <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here -->
+      <%= link_to image_tag('sb_pin.jpg', :alt=>'草莓故事'), stories_url, :target=>'_blank' %>
+      <p><span><%= link_to '草莓故事', stories_url, :target=>'_blank' %></span></p>
+    </div>
+    <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here -->
+      <%= link_to image_tag('sb_pin.jpg', :alt=>'最新资讯'), newslists_url, :target=>'_blank' %>
+      <p><span><%= link_to '最新资讯', newslists_url, :target=>'_blank' %></span></p>
+    </div>
+    <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here -->
+      <%= link_to image_tag('sb_pin.jpg', :alt=>'莓园联盟'), alliance_gardens_url, :target=>'_blank' %>
+      <p><span><%= link_to '莓园联盟', alliance_gardens_url, :target=>'_blank' %></span></p>
+    </div>
+  </section>
+
+  <section class="section1">
+    <h2 class="sectionTitle">系统用户管理</h2>
+    <div class="socialNetworkNav">
+      <!-- Add a Anchor tag with nested img tag here -->
+      <%= link_to image_tag('sb_pin.jpg',:alt => '系统用户'), users_url, :target=>'_blank' %>
+      <p><span><%= link_to '用户表', users_url , :target=>'_blank' %></span></p>
+    </div>
+
+  </section>
+
+
+  <section class="section1">
+    <h2 class="sectionTitle">访客数据表管理</h2>
+        <div class="socialNetworkNav">
+          <!-- Add a Anchor tag with nested img tag here -->
+          <%= link_to image_tag('sb_pin.jpg',:alt => '会员信息'), members_url, :target=>'_blank' %>
+          <p><span><%= link_to '会员信息表', members_url, :target=>'_blank' %></span></p>
+        </div>
+        <span class="stretch"></span>
+        <div class="socialNetworkNav">
+          <!-- Add a Anchor tag with nested img tag here -->
+          <%= image_tag('sb_pin.jpg') %>
+          <p><span>访客行为表</span></p>
+        </div>
+        <span class="stretch"></span>
+        <div class="socialNetworkNav">
+          <!-- Add a Anchor tag with nested img tag here -->
+          <%= image_tag('sb_pin.jpg') %>
+          <p><span>访客重点表</span></p>
+        </div>
+  </section>
+</div>
+
+
+</body>
+</html>

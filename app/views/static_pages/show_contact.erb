@@ -1,0 +1,78 @@
+<body>
+<div id="wrap">
+  <div class="header1">
+    <div class="logo">
+      <%= link_to(image_tag(''),  home_index_path) %>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><%= link_to '首页', home_index_path %></li>
+        <li><%= link_to '草莓时光', static_pages_about_path %></li>
+        <li><%= link_to '草莓商城',  store_index_url %></li>
+        <li><%= link_to '莓味佳肴',  recipe_blog_index_url %></li>
+        <li><%= link_to '特品草莓园',  static_pages_agencygarden_path %></li>
+        <li><%= link_to '草莓故事',  static_pages_story_path %></li>
+        <li><%= link_to '最新资讯',  static_pages_newslist_path %></li>
+        <li><%= link_to '莓园联盟',  static_pages_alliance_garden_path %></li>
+        <li class="selected"><%= link_to '联系我们', static_pages_contact_path %></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="center_content">
+    <div class="left_content">
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet1.gif') %></span>联系我们</div>
+
+
+      <div class="feat_prod_box">
+
+        <div class="prod_det_box1">
+          <div class="box_top1"></div>
+          <div class="box_center1">
+
+            <div>
+              <div class="prod_title">
+                <p>您的联系方式为</p>
+
+                <p>姓名或昵称: <%= session[:contact_name] %></p>
+                <p>您的E-mail: <%= session[:contact_email] %></p>
+                <br>
+                <p>感谢您提交的信息，我们将发送相关资料到您邮箱。</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="clear"></div>
+
+        </div>
+
+        <div class="box_bottom1"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+
+
+  </div><!--end of left content-->
+
+
+
+  <div class="right_content">
+
+    <%= render 'layouts/right_down_form' %>
+
+
+  </div><!--end of right content-->
+
+
+  <div class="clear"></div>
+</div><!--end of center content-->
+
+
+
+</div>
+
+</body>

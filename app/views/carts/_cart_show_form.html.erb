@@ -1,0 +1,41 @@
+
+
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet1.gif') %></span>您的购物车</div>
+
+
+      <div class="feat_prod_box">
+
+        <div class="prod_det_box2">
+
+          <div id="cart_content">    <!--start of cart show -->
+
+            <table>
+            <% @cart.line_items.each do |item| %>
+            <tr>
+              <td><%= image_tag(item.product.image_url, :class => 'list_image', :width => '80' ) %></td>
+              <td><%= item.product.title %></td>
+              <td><%= number_to_currency(item.product.price, unit: '￥') %> 元</td>
+              <td> &times; </td>
+              <td><%= item.quantity %>件</td>
+              <td> = </td>
+              <td class="item_price"><%= number_to_currency(item.subtotal_price, unit: '￥') %> 元</td>
+            </tr>
+            <% end %>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td colspan="2"> 总计 </td>
+              <td class="total_cell"><%= number_to_currency(@cart.total_price, unit: '￥') %> 元</td>
+            </tr>
+          </table>
+          </div>    <!--end of cart show -->
+
+      </div>
+    </div><!--end of left content-->
+
+
+

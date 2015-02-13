@@ -1,0 +1,63 @@
+<body>
+<div id="wrap">
+  <div class="header">
+    <div class="logo">
+      <%= link_to(image_tag(''),  home_index_path) %>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><%= link_to '首页', home_index_path %></li>
+        <li><%= link_to '草莓时光', static_pages_about_path %></li>
+        <li class="selected"><%= link_to '草莓商城',  store_index_url %></li>
+        <li><%= link_to '莓味佳肴',  recipe_blog_index_url %></li>
+        <li><%= link_to '特品草莓园',  static_pages_agencygarden_path %></li>
+        <li><%= link_to '草莓故事',  static_pages_story_path %></li>
+        <li><%= link_to '最新资讯',  static_pages_newslist_path %></li>
+        <li><%= link_to '莓园联盟',  static_pages_alliance_garden_path %></li>
+        <li><%= link_to '联系我们', static_pages_contact_path %></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="center_content">
+    <div class="left_content">
+
+      <%= render 'carts/cart_show_form' %>
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet1.gif') %></span>您的订单</div>
+
+      <div class="contact_form1">
+        <div class="form_subtitle">不登陆完成订购，请完善您的详细信息</div>
+        <span class="required_notification">* 表示必填项</span>
+
+        <%= render 'form' %>
+
+      </div>
+
+      <div class="contact_form1">
+        <div class="form_subtitle">注册并完善您的详细信息</div>
+        <span class="required_notification">注册后将非常方便管理购物记录，再次订购时将免于输入订购信息。注册会员将获得草莓时光网VIP关注。</span>
+        <span class="required_notification">* 表示必填项</span>
+
+        <%= button_to '注册或登陆...', members_path %>
+      </div>
+
+    </div><!--end of left content-->
+
+    <div class="right_content">
+
+
+      <%= render 'layouts/right_down_form' %>
+
+    </div><!--end of right content-->
+
+
+
+    <div class="clear"></div>
+  </div><!--end of center content-->
+
+
+</div>
+
+</body>

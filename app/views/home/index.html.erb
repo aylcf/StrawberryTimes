@@ -1,0 +1,121 @@
+
+<body>
+<div id="wrap">
+  <div class="header1">
+    <div class="logo">
+      <%= link_to(image_tag(''),  home_index_path) %>
+    </div>
+
+
+      <div id="menu">
+        <ul>
+          <li class="selected"><%= link_to '首页', home_index_path %></li>
+          <li><%= link_to '草莓时光', static_pages_about_path %></li>
+          <li><%= link_to '草莓商城',  store_index_url %></li>
+          <li><%= link_to '莓味佳肴',  recipe_blog_index_url %></li>
+          <li><%= link_to '特品草莓园',  static_pages_agencygarden_path %></li>
+          <li><%= link_to '草莓故事',  static_pages_story_path %></li>
+          <li><%= link_to '最新资讯',  static_pages_newslist_path %></li>
+          <li><%= link_to '莓园联盟', static_pages_alliance_garden_url  %></li>
+          <li><%= link_to '联系我们', static_pages_contact_path %></li>
+        </ul>
+      </div>
+  </div>
+
+
+<div class="center_content">
+  <div class="left_content">
+
+    <div class="title"><span class="title_icon"><%= image_tag('bullet1.gif') %></span>北京昌平草莓世界</div>
+
+    <div class="feat_prod_box">
+
+      <div class="prod_img"><%= link_to(image_tag('guojibolanhui.jpg'), static_pages_worldcongress_path, :alt=>'', :title=>'', :border=>'0', :target => '_blank' ) %></div>
+
+      <div class="prod_det_box">
+        <div class="box_top"></div>
+        <div class="box_center">
+          <div class="prod_title">世界草莓博览会</div>
+          <p class="details">世界草莓博览会由国际园艺学会创办，每四年举办一次，被誉为“草莓界的奥运会”，是展现全球草莓最新科技前沿成果的学术盛会，也是引领世界草莓产业发展趋势的风向标，具有广泛的国际声誉和影响力。北京昌平凭借优质有机草莓资源，成功荣获第七届世界草莓大会（2012年）举办资格。</p>
+          <%= link_to '- The World Congress of Strawberry -', static_pages_worldcongress_path, :class=> 'more', :target => '_blank' %>
+          <div class="clear"></div>
+        </div>
+
+        <div class="box_bottom"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+
+    <div class="feat_prod_box">
+
+      <div class="prod_img"><%= link_to(image_tag('jianianhua.jpg'), static_pages_jianianhua_path, :alt=>'', :title=>'', :border=>'0', :target => '_blank' ) %></div>
+      <div class="prod_det_box">
+        <div class="box_top"></div>
+        <div class="box_center">
+          <div class="prod_title">北京农业嘉年华</div>
+          <p class="details">昌平区在成功举办了第七届世界草莓博览会的基础上，利用大会现有场馆又成功举办两届北京农业嘉年华。北京农业嘉年华受到了广大首都市民的高度评价，已经成为北京都市农业的一张绚丽“名片”，引起了国内外的广泛关注和效仿，对推动我国都市农业的创新发展，丰富城乡居民的休闲文化生活，促进农业科技进步，打造美丽中国起到了很好的示范和带动作用。</p>
+          <%= link_to '- 农业嘉年华之精品草莓 -', static_pages_jianianhua_path, :class=> 'more', :target => '_blank' %>
+
+          <div class="clear"></div>
+        </div>
+
+        <div class="box_bottom"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+
+
+    <div class="title"><span class="title_icon"><%= image_tag('bullet2.gif', :alt=>'', :title=>'') %></span>最新特供精品</div>
+
+    <div class="new_products">
+
+      <div class="new_prod_box">
+
+        <a>圣诞红</a>
+        <div class="new_prod_bg">
+          <span class="new_icon"><%= image_tag('new_icon.gif', :alt=>'', :title=>'') %></span>
+          <%= link_to(image_tag('shengdanhong-112.jpg'), product_path('1'), :url => {:controller => 'products', :action => 'find_product', :target=>'_blank' }, :alt=>'圣诞红', :title=>'', :class=>'thumb', :border=>'0' ) %>
+        </div>
+      </div>
+
+      <div class="new_prod_box">
+        <%= link_to '隨珠', 'view/details.html' %>
+        <div class="new_prod_bg">
+          <span class="new_icon"><%= image_tag('new_icon.gif', :alt=>'', :title=>'') %></span>
+          <%= link_to(image_tag('shengdanhong-112.jpg'), product_path('2'), :url => {:controller => 'products', :action => 'find_product', :target=>'_blank' }, :alt=>'圣诞红', :title=>'', :class=>'thumb', :border=>'0' ) %>
+        </div>
+      </div>
+
+      <div class="new_prod_box">
+        <%= link_to '点雪', 'view/details.html' %>
+        <div class="new_prod_bg">
+          <span class="new_icon"><%= image_tag('new_icon.gif', :alt=>'', :title=>'') %></span>
+          <%= link_to(image_tag('shengdanhong-112.jpg'), product_path('3'), :url => {:controller => 'products', :action => 'find_product', :target=>'_blank' }, :alt=>'圣诞红', :title=>'', :class=>'thumb', :border=>'0' ) %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="clear"></div>
+  </div><!--end of left content-->
+
+
+
+  <div class="right_content">
+
+    <%= render 'layouts/right_down_form' %>
+
+
+  </div><!--end of right content-->
+
+
+  <div class="clear"></div>
+</div><!--end of center content-->
+
+
+
+</div>
+
+</body>

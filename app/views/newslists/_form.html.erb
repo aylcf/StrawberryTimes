@@ -1,0 +1,33 @@
+<%= form_for(@newslist) do |f| %>
+  <% if @newslist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@newslist.errors.count, "error") %> prohibited this newslist from being saved:</h2>
+
+      <ul>
+      <% @newslist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :咨询主题 %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :提交时间 %><br>
+    <%= f.text_field :posttime %>
+  </div>
+  <div class="field">
+    <%= f.label :咨询内容 %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :咨询配图 %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit '确 定' %>
+  </div>
+<% end %>

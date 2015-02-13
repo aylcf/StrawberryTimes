@@ -1,0 +1,35 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Import Bootstrap and Customize it here.
+@import "bootstrap";
+
+#product_page, #product_page table {
+  text-align: center;
+  margin:0 auto;
+
+}
+
+#product_page table .list_description {
+  font-size: 18px;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+#quantity {
+  width: 10px;
+}
+
+.list_title {
+  background-color: #00006d;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.list_detail {
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+

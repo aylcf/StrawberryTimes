@@ -1,0 +1,73 @@
+<div id="wrap">
+  <div class="header1">
+    <div class="logo">
+      <%= link_to(image_tag(''),  home_index_path) %>
+    </div>
+    <div id="menu">
+      <ul>
+        <li class="selected"><%= link_to '首页', home_index_path %></li>
+        <li><%= link_to '草莓时光', static_pages_about_path %></li>
+        <li><%= link_to '草莓商城',  store_index_url %></li>
+        <li><%= link_to '莓味佳肴',  recipe_blog_index_url %></li>
+        <li><%= link_to '特品草莓园',  static_pages_agencygarden_path %></li>
+        <li><%= link_to '草莓故事',  static_pages_story_path %></li>
+        <li><%= link_to '最新资讯',  static_pages_newslist_path %></li>
+        <li><%= link_to '莓园联盟',  static_pages_alliance_garden_path %></li>
+        <li><%= link_to '联系我们', static_pages_contact_path %></li>      </ul>
+    </div>
+  </div>
+
+  <div class="center_content">
+    <div class="left_content">
+
+      <div class="title"><span class="title_icon"><%= image_tag('bullet1.gif') %></span>编辑帐户信息</div>
+
+      <div class="feat_prod_box1">
+
+        <div class="prod_det_box1">
+
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email, required: true, autofocus: true %>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <p>当前等待确认 <%= resource.unconfirmed_email %></p>
+    <% end %>
+
+    <%= f.input :password, autocomplete: "off", hint: "如果你不想修改此项，请保持此处空白。", required: false %>
+    <%= f.input :password_confirmation, required: false %>
+    <%= f.input :current_password, hint: "输入当前密码来进行确认。", required: true %>
+  </div>
+
+
+    <div class="title"><span class="title_icon"><%= image_tag('bullet2.gif') %></span>订单收货详细信息</div>
+    <div>
+      <%= f.input :order_name, label: '收货人姓名：' %>
+      <%= f.input :phone, label: '收货人电话：' %>
+      <%= f.input :address, label: '收货地址：' %>
+      <%= f.input :pay_type, label: '付款方式：' %>
+
+    </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "更新" %>
+  </div>
+<% end %>
+
+<h3>注销我的帐户</h3>
+
+<p>对草莓时光不兴趣了？ <%= link_to "注销我的帐户", registration_path(resource_name), data: { confirm: "您确定注销帐户吗？" }, method: :delete %></p>
+
+<%= link_to "返回", :back %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

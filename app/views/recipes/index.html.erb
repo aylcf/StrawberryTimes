@@ -1,0 +1,33 @@
+<div id="product_list">
+  <h1>草莓主题西点</h1>
+
+<table>
+
+
+    <% @recipes.each do |recipe| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <td>
+          <%= image_tag(recipe.image_url, width: 200) %>
+        </td>
+
+        <td class="list_description">
+          <dl>
+            <dt><%= recipe.title %></dt>
+            <dd><%= truncate(strip_tags(recipe.description), :length=>80) %></dd>
+          </dl>
+        </td>
+
+        <td class="list_actions">
+          <%= link_to '查 看', recipe %>
+          <%= link_to '编 辑', edit_recipe_path(recipe) %>
+          <%= link_to '删 除', recipe, method: :delete, data: { confirm: '您确定要删除吗？' } %>
+        </td>
+    <% end %>
+
+</table>
+</div>
+<br>
+<%= paginate @recipes, :left => 2, :right => 3 %>
+<br>
+
+<%= link_to '新增菜谱', new_recipe_path %>

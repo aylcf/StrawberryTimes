@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-wdith, initial-scale=1.0">
+  <title>草莓时光</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+</head>
+
+  <div id="wrap">
+    <div class="header">
+      <div id="sign_in">
+        <span class="notice"><%= notice %></span>
+        <span class="alert"><%= alert %></span>
+
+        <% if current_member %>
+        <strong><%= current_member.email %> , </strong>
+        <%= link_to('退出', destroy_member_session_path, :method => :delete) %> |
+        <%= link_to('设置', edit_registration_path(:member)) %>
+      <% else %>
+        <%= link_to('注册', new_registration_path(:member)) %> |
+        <%= link_to('登录', new_session_path(:member)) %>
+      <% end %><span></span>
+    </div>
+
+  </div>
+  </div>
+  <%= yield %>
+
+<!-- Javascripts
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+<!--start of footer-->
+<div id="wrap">
+
+<div class="footer">
+  <div class="left_footer">
+
+    <p>&copy; 2015 草莓时光.北京 All rights reserved.&nbsp;<%= link_to 'MUZT团队', '#', :target=>'_blank' %></p>
+
+  </div>
+  <div class="right_footer">
+    <%= link_to '首页', home_index_path %>
+    <%= link_to '草莓时光', static_pages_about_path %>
+    <%= link_to '莓味佳肴',  recipe_blog_index_url %>
+    <%= link_to '特品草莓园',  static_pages_agencygarden_path %>
+    <%= link_to '草莓故事',  static_pages_story_path %>
+    <%= link_to '最新资讯',  static_pages_newslist_path %>
+    <%= link_to '莓园联盟',  static_pages_alliance_garden_path %>
+    <%= link_to '联系我们', static_pages_contact_path %>
+  </div>
+</div>
+</div>
+<!--end of footer-->
+
+
+
+</html>
